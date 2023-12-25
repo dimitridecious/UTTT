@@ -1,5 +1,6 @@
 from gamemanager import GameManager
 from masterboard import MasterBoard
+from gameboard import GameBoard
 import pygame
 
 #system variables
@@ -17,13 +18,16 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     running = True
+    my_gameboard = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
+    my_gameboard.print_grid()
 
     while running:
+
+        my_gameboard.draw_grid()
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
 
         # RENDER YOUR GAME HERE
 
