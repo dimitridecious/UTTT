@@ -18,12 +18,11 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
     running = True
-    my_gameboard = GameBoard(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
-    my_gameboard.print_grid()
+    my_masterboard = MasterBoard(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
 
     while running:
 
-        my_gameboard.draw_grid()
+        my_masterboard.draw_master_grid()
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
