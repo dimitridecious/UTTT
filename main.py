@@ -16,6 +16,7 @@ SCREEN_HEIGHT = 1000
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption("Ultimate Tic Tac Toe")
     clock = pygame.time.Clock()
     running = True
     my_masterboard = MasterBoard(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
