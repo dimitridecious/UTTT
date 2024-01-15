@@ -54,3 +54,5 @@ class GameBoard:
             for cell in row:
                 cell.draw_cell(x_pos, y_pos, self.surface)
                 x_pos += block_width
+
+                

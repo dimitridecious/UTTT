@@ -1,6 +1,4 @@
 from gamemanager import GameManager
-from masterboard import MasterBoard
-from gameboard import GameBoard
 import pygame
 
 #system variables
@@ -19,15 +17,19 @@ def main():
     pygame.display.set_caption("Ultimate Tic Tac Toe")
     clock = pygame.time.Clock()
     running = True
-    my_masterboard = MasterBoard(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
+    game_manager = GameManager(SCREEN_WIDTH, SCREEN_HEIGHT, screen)
 
     while running:
 
-        my_masterboard.draw_master_grid()
+        game_manager.draw_game()
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                position = pygame.mouse.get_pos()
+                sel_cell = game_manager.get_hovered_cell(position)
+                #set that cells sel val to true
 
         # RENDER YOUR GAME HERE
 
