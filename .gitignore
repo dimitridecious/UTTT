@@ -1,3 +1,2 @@
-UTTT_Spec.pdf
-__pycache__/
-test.py
+gameenv/
+src/__pycache__
